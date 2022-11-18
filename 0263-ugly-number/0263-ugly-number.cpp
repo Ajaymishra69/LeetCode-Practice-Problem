@@ -1,8 +1,10 @@
 class Solution {
 public:
     bool isUgly(int n) {
-        while(n>1)
+        while(n>0)
         {
+            if(n==1)
+                return true;
             if(n%2==0)
              n=n/2;
             else if(n%3==0)
@@ -12,8 +14,6 @@ public:
             else
                 return false;
         }
-        if(n==1)
-            return true;
         return false;
     }
 };
