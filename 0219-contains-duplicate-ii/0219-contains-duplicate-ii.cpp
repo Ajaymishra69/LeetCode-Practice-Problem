@@ -1,18 +1,19 @@
-class Solution {
-public:
-    bool containsNearbyDuplicate(vector<int>& nums, int k) {
-        int n = nums.size();
-        unordered_map<int,int>m;
-        for(int i=0;i<n;i++)
+class Solution
+{
+    public:
+        bool containsNearbyDuplicate(vector<int> &nums, int k)
         {
-            if(m.count(nums[i])==1)
+            int n = nums.size();
+            unordered_map<int, int> m;
+            for (int i = 0; i < n; i++)
             {
-                if(abs(i-m[nums[i]])<=k)
-                    return true;
+                if (m.count(nums[i]) == 1)
+                {
+                    if (abs(i - m[nums[i]]) <= k)
+                        return true;
+                }
+                m[nums[i]] = i;
             }
-             m[nums[i]]=i;
-                
+            return false;
         }
-        return false;
-    }
 };
