@@ -1,40 +1,29 @@
 /**
- *Definition for singly-linked list.
- *struct ListNode {
- *    int val;
- *    ListNode * next;
- *    ListNode() : val(0), next(nullptr) {}
- *    ListNode(int x) : val(x), next(nullptr) {}
- *    ListNode(int x, ListNode *next) : val(x), next(next) {}
- *};
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
  */
-class Solution
-{
-    public:
-        int pairSum(ListNode *head)
+class Solution {
+public:
+    int pairSum(ListNode* head) {
+        vector<int> v; 
+        int sum=INT_MIN,n,i;
+        ListNode* temp=head;
+        while(temp)
         {
-            if (head->next->next == NULL)
-            {
-                return (head->val + head->next->val);
-            }
-            vector<pair<int, int>>p1;
-            int ans =0,max = INT_MIN;
-            int i =0;
-            while(head!=NULL)
-            {
-                p1.push_back(make_pair(i,head->val));
-                head=head->next;
-                i++;
-            }
-            //int n =p1.size();
-            for(int j =0;j<i/2;j++)
-            {
-                ans=p1[j].second+p1[i-1-j].second;
-                if(ans>max)
-                {
-                    max=ans;
-                }
-            }
-            return max;
+            v.push_back(temp->val);
+            temp=temp->next;
         }
+        n=v.size();
+        for(i=0;i<n/2;i++)
+        { sum=max(sum,(v[i]+v[n-i-1]));
+
+        }
+      return sum;  
+    }
 };
