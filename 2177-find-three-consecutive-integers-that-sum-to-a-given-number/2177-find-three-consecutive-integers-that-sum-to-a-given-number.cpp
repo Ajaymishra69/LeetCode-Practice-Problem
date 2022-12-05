@@ -6,10 +6,10 @@ public:
             return v1;
         else
         {
-            long long x =num/3;
-            v1.push_back(x-1);
-            v1.push_back(x);
-            v1.push_back(x+1);
+            //long long x =num/3;
+            v1.push_back((num/3)-1);
+            v1.push_back((num/3));
+            v1.push_back((num/3)+1);
         }
         return v1;
     }
