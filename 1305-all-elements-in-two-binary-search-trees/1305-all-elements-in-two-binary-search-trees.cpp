@@ -21,19 +21,19 @@ public:
          inorder(root1->right,v1);
      }
     
-    void inorder2(TreeNode* root2,vector<int>&v1){
-         if(root2==NULL)
-         {
-             return;
-         }
-         inorder(root2->left,v1);
-         v1.push_back(root2->val);
-         inorder(root2->right,v1);
-     }
+    // void inorder2(TreeNode* root2,vector<int>&v1){
+    //      if(root2==NULL)
+    //      {
+    //          return;
+    //      }
+    //      inorder(root2->left,v1);
+    //      v1.push_back(root2->val);
+    //      inorder(root2->right,v1);
+    //  }
     vector<int> getAllElements(TreeNode* root1, TreeNode* root2) {
         vector<int>v1;
         inorder(root1,v1);
-        inorder2(root2,v1);
+        inorder(root2,v1);
         sort(v1.begin(),v1.end());
         return v1;
         
