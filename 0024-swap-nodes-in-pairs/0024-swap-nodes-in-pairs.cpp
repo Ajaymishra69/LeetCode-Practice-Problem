@@ -13,34 +13,14 @@ class Solution
     public:
         ListNode* swapPairs(ListNode *head)
         {
-            int cnt = 0;
-            if (head == NULL || head->next == NULL)
+            if(head==NULL||head->next==NULL)
                 return head;
-            ListNode *temp = head;
-            while (temp != NULL)
+            if(head!=NULL&&head->next!=NULL)
             {
-               	//swap(temp->val,temp->next->val);
-                temp = temp->next;
-                cnt++;
+                swap(head->val,head->next->val);
+                swapPairs(head->next->next);
             }
-            temp = head;
-            if (cnt % 2 == 0)
-                while (temp != NULL)
-                {
-                    swap(temp->val, temp->next->val);
-                    temp = temp->next->next;
-                }
-            else
-            {
-                cnt = cnt / 2;
-                while (cnt > 0)
-                {
-                    swap(temp->val, temp->next->val);
-                    temp = temp->next->next;
-                    cnt--;
-                }
-            }
-
             return head;
+            
         }
 };
