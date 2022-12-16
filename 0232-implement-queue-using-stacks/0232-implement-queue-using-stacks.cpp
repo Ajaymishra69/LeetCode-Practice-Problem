@@ -3,7 +3,6 @@ class MyQueue
     public:
         MyQueue() {}
     stack<int> st1, st2;
-   	//int top;
     void push(int x)
     {
         while (!st1.empty())
