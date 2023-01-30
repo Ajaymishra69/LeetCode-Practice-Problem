@@ -10,12 +10,6 @@ public:
         return dp[n] = f(n-1,dp)+f(n-2,dp);
     }
     int fib(int n) {
-        // if(n<=0)         Brute Force 
-        //     return 0;
-        // if(n==1)
-        //     return 1;
-        // return fib(n-1)+fib(n-2);
-        
         vector<int>dp(n+1,-1);
         return f(n,dp);
     }
