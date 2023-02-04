@@ -20,7 +20,9 @@ public:
         int freq[n];
         vector<int> v;
         vector<vector<int>>ans;
-        for(int i =0;i<n;i++)freq[i]=0;
+        for(int i =0;i<n;i++){
+            freq[i]=0;
+        }
         fun(n,nums,freq,v,ans);
         return ans;
     }
