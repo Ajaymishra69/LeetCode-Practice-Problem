@@ -7,7 +7,7 @@ public:
         for(int i=1;i<n;i++){
             int pick = nums[i]+prev2;
             int notpick = prev1;
-            int curr = max(pick , notpick);
+            int curr = max(pick,notpick);
             prev2=prev1;
             prev1=curr;
         }
