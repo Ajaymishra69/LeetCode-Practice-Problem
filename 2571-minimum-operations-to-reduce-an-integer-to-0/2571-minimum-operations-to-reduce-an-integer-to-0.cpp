@@ -13,7 +13,6 @@ public:
                 temp1=arr[j];
             }
         }
-        
         return temp1;
     }
     int minOperations(int n) {
