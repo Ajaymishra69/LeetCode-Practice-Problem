@@ -13,9 +13,7 @@ public:
         }
         sort(v.begin(),v.end());
         for(auto i:v)
-        {
             ans+=i.second+" ";
-        }
         ans.pop_back();
         return ans;
     }
