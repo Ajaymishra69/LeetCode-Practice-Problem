@@ -9,7 +9,7 @@ public:
             {    x++;
                 maxi=max(maxi,x);
             }
-            if(s[i]==')')
+            else if(s[i]==')')
                 x--;
             else
                 continue;
