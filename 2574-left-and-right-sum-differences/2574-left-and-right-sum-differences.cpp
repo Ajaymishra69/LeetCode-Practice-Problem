@@ -13,13 +13,8 @@ public:
             rsum+=nums[j+1];
             rs.insert(rs.begin(),rsum);
         }
-        // for(auto i:ls)
-        //     cout<<i<<endl;
-        // for(auto i:rs)
-        //     cout<<i<<endl;
-        for(int i=0;i<n;i++){
+        for(int i=0;i<n;i++)
             ans[i]=abs(ls[i]-rs[i]);
-        }
         return ans;
     }
 };
