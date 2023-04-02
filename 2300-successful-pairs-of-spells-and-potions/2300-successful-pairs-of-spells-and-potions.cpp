@@ -5,7 +5,6 @@ public:
         int lastIndex = potions.size() - 1;
         int ansIndex = -1;
         while(startIndex <= lastIndex){
-            //helps to prevent from out of bound
             int midIndex = (startIndex + (lastIndex - startIndex) / 2);
             if ((long long) spell * potions[midIndex] >= success){
                 ansIndex = midIndex;
