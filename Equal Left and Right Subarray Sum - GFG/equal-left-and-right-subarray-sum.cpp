@@ -40,10 +40,6 @@ class Solution {
             ssum.push_back(ss);
         }
         reverse(ssum.begin(),ssum.end());
-        // for(auto i:psum)cout<<i<<" ";
-        // cout<<endl;
-        // for(auto i:ssum)cout<<i<<" ";
-        // cout<<endl;
         for(int i =0;i<psum.size();i++){
             if(psum[i]==ssum[i])
                 ans=i;
