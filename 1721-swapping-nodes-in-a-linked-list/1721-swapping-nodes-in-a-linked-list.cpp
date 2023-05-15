@@ -23,7 +23,9 @@ public:
             x=x->next;
             z=z->next;
         }
-        swap(t->val,x->val);
+        int temp = x->val;
+        x->val = t->val;
+        t->val = temp;
         return head;
         
     }
