@@ -13,23 +13,17 @@ public:
     ListNode* swapNodes(ListNode* head, int k) {
         ListNode* t = head;
         ListNode* x = head;
-        int size=0;
         int te = k;
-        while(t!=NULL){
-            t=t->next;
-            size++;
-        }
-        t=head;
         while(te>1){
             t=t->next;
             te--;
         }
-        int c = size-k;
-        while(c--){
+        ListNode* z = t;
+        while(z->next!=NULL){
             x=x->next;
+            z=z->next;
         }
         swap(t->val,x->val);
-        // cout<<size;
         return head;
         
     }
